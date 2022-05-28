@@ -1,6 +1,8 @@
 import styled from "styled-components";
 //navbar begin
 export const Container = styled.div`
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,6 +32,7 @@ export const Menu = styled.div`
 `;
 // content begin
 export const ContentCon = styled.div`
+  padding-top: 60px;
   display: flex;
   background-color: #222831;
   border-bottom: 1px solid red;
@@ -41,7 +44,6 @@ export const ContentLeft = styled.div`
 export const ContentRight = styled.div`
   border: 1px solid yellow;
   width: 50%;
-  padding-left: 7rem;
 `;
 export const Title = styled.div`
   border: 1px solid pink;
@@ -89,4 +91,36 @@ export const TitleBottom = styled.div`
   p {
     color: #ffffff;
   }
+`;
+//About
+
+export const About = styled.div`
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid red;
+  h2 {
+  }
+`;
+export const AboutRight = styled.div`
+  border: 1px solid black;
+
+  width: 50%;
+  h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: Bw Stretch;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 63px;
+    text-transform: uppercase;
+    color: #222831;
+  }
+`;
+export const AboutLeft = styled.div`
+  border: 1px solid black;
+  width: 50%;
 `;

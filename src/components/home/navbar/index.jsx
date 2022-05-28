@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Modal } from "antd";
 import "antd/dist/antd.css";
 import {
+  About,
+  AboutLeft,
+  AboutRight,
   TitleBottom,
   Play,
   Container,
@@ -15,8 +18,10 @@ import {
 } from "./style";
 import Logo from "../../assets/img/logo.png";
 import PlayP from "../../assets/img/play_icon.png";
+import AboutPicture from "../../assets/img/about_bg.jpg";
+
 const Navbar = () => {
-  const [modal2Visible, setModal2Visible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <Container>
@@ -39,15 +44,14 @@ const Navbar = () => {
             <span>raqobat </span>qilishlari kerak
           </Title>
           <Play>
-            <button onClick={() => setModal2Visible(!modal2Visible)}>
+            <button onClick={() => setModalVisible(!modalVisible)}>
               <img src={PlayP} alt="play" />
             </button>
             <Modal
               centered
-              visible={modal2Visible}
-              onOk={() => setModal2Visible(false)}
-              onCancel={() => setModal2Visible(false)}
+              visible={modalVisible}
               footer={null}
+              onCancel={() => setModalVisible(false)}
               header={null}
             >
               <div>
@@ -77,6 +81,24 @@ const Navbar = () => {
           ></img>
         </ContentRight>
       </ContentCon>
+      <About>
+        <AboutLeft>
+          <img src={AboutPicture} alt="About" />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <h2>
+            Kadir ortidagi
+            <br />
+            <b>bizning jamoa</b>
+          </h2>
+        </AboutLeft>
+        <AboutRight>
+          <h2>Biz haqimizda</h2>
+        </AboutRight>
+      </About>
     </>
   );
 };
